@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_name }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.short_description }}"
+authors = [
+    "{{ cookiecutter.author }} <{{ cookiecutter.author_email }}>",
+]
+
+license = "BSD-3-Clause"
+readme = "README.md"
+
+documentation = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/blob/master/README.md"
+homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
+repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+
+include = ["{{ cookiecutter.project_slug }}/py.typed"]
+packages = [
+  { include = "{{ cookiecutter.project_slug }}" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.6.1, <4.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
